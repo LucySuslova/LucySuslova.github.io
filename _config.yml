@@ -1,14 +1,14 @@
-title:             Clean Blog
+title:             Test Automation
 email:             your-email@example.com
-description:       A Blog Theme by Start Bootstrap
-author:            Start Bootstrap
-baseurl:           "/startbootstrap-clean-blog-jekyll"
-url:               "http://blackrockdigital.github.io"
+description:       Quick Automation Notes
+author:            Lucy
+baseurl:           "/home"
+url:               "http://lucysuslova.github.io"
 
 # Social Profiles
-twitter_username:  SBootstrap
-github_username:   BlackrockDigital
-facebook_username: StartBootstrap
+twitter_username:  luciesuva
+github_username:   lucysuslova
+#facebook_username: StartBootstrap
 
 # Build settings
 markdown:          kramdown
