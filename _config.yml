@@ -1,9 +1,11 @@
-title:             Test Automation
-email:             your-email@example.com
-description:       Quick Automation Notes
-author:            Lucy
-baseurl:           "/home"
-url:               "http://lucysuslova.github.io"
+title: "Test Automation"
+header-img: img/bg-index.jpg
+email: "your-email@example.com"
+copyright_name: "Lucy Suslova"
+description: "Quick Automation Notes"
+name: "Quick Automation Notes blog"
+baseurl: ""
+url: "https://lucysuslova.github.io"
 
 # Social Profiles
 twitter_username:  luciesuva
@@ -12,6 +14,8 @@ github_username:   lucysuslova
 
 # Build settings
 markdown:          kramdown
+highlighter:       rouge
+permalink:         pretty
 paginate:          5
 paginate_path:     "/posts/page:num/"
 plugins:
@@ -19,3 +23,6 @@ plugins:
   - jekyll-paginate
 
 theme: jekyll-theme-cayman
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed, jekyll-seo-tag, jekyll-sitemap]
