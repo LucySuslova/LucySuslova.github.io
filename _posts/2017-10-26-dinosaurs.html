@@ -16,6 +16,7 @@ background: '/img/posts/01.jpg'
 
 <p>
     <code>
+        <pre>
         *** Keyword ***
         Wait For Loader To Disappear
         :FOR    ${i}    IN RANGE    15
@@ -23,6 +24,7 @@ background: '/img/posts/01.jpg'
         \    ${present}=  Run Keyword And Return Status    Element Should Be Visible    ${loaderId}
         \    Exit For Loop If    ${present}==False
         \    log  Wait for loader to disappear ${i} sec     console=True
+        </pre>
     </code>
 </p>
 
@@ -30,6 +32,7 @@ background: '/img/posts/01.jpg'
 
 <p>
     <code>
+        <pre>
         *** Keyword ***
         Wait For Loader To Disappear
         [Arguments]    ${seconds}
@@ -38,5 +41,6 @@ background: '/img/posts/01.jpg'
         \    ${present}=  Run Keyword And Return Status    Element Should Be Visible    ${loaderId}
         \    Exit For Loop If    ${present}==False
         \    log  Wait for loader to disappear ${i} sec     console=True
+        </pre>
     </code>
 </p>
