@@ -3,7 +3,7 @@ layout: post
 title:  "kind of fluent wait for robot framework..."
 description: "to make sure element is not visible"
 date:   2020-01-03 09:40:39 +0300
-header-img:  "/img/posts/01.jpg"
+header-img:  "img/posts/01.jpg"
 
 ---
 
@@ -14,7 +14,7 @@ header-img:  "/img/posts/01.jpg"
 
 
 Often enough I need to know when the loader element has already disappeared and I can continue to perform further actions and verifications.
-    In such cases I use a kind of 'Wait Until Element Is Not Visible' workaround.
+    In such cases I use a kind of ```Wait Until Element Is Not Visible``` workaround.
 
 {% highlight python %}
         *** Keyword ***
