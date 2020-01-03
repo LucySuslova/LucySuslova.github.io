@@ -3,11 +3,11 @@ layout: post
 title:  "kind of fluent wait for robot framework..."
 subtitle: "to make sure element is not visible"
 date:   2018-10-23 23:45:13 -0400
-header-img: "/img/p-01.jpg"
+header-img:  "/img/posts/p-01.jpg"
 ---
 
 [Robot Framework](https://robotframework.org/) provides native solution how to wait for element to be visible and vice versa. But using such keywords as
-```Wait Until Element Is Not Visible```or ```Wait Until Element Is Visible``` with timeout often fails with stale element exception.
+```Wait Until Element Is Not Visible``` or  ```Wait Until Element Is Visible``` with timeout often fails with stale element exception.
     And I try not to use these keywords in my test scripts to avoid possible undesirable flakiness.
 
 
