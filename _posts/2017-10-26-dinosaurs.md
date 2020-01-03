@@ -1,23 +1,21 @@
 ---
 layout: post
-title:  "[first] kind of fluent wait for robot framework..."
+title:  "kind of fluent wait for robot framework..."
 subtitle: "to make sure element is not visible"
 date:   2018-10-23 23:45:13 -0400
-background: '/img/p-01.jpg'
-header-img: '/img/p-01.jpg'
+header-img: "/img/p-01.jpg"
 ---
 
-<p>Robot Framework provides native solution how to wait for element to be visible and vice versa. But using such keywords as
-    <code>Wait Until Element Is Not Visible</code> or <code>Wait Until Element Is Visible</code> with timeout often fails with Stale Element Exception.
+[Robot Framework](https://robotframework.org/) provides native solution how to wait for element to be visible and vice versa. But using such keywords as
+```Wait Until Element Is Not Visible```or ```Wait Until Element Is Visible``` with timeout often fails with stale element exception.
     And I try not to use these keywords in my test scripts to avoid possible undesirable flakiness.
-</p>
 
-<p>Often enough I have to know when loader element has already disappeared and I can continue to perform further actions and checks.
-    In such cases I use a kind of 'Wait Until Element Is Not Visible workaround'. </p>
 
-<p>
-    <code>
-        <pre>
+
+Often enough I need to know when the loader element has already disappeared and I can continue to perform further actions and verifications.
+    In such cases I use a kind of 'Wait Until Element Is Not Visible' workaround.
+
+```
         *** Keyword ***
         Wait For Loader To Disappear
         :FOR    ${i}    IN RANGE    15
@@ -25,15 +23,12 @@ header-img: '/img/p-01.jpg'
         \    ${present}=  Run Keyword And Return Status    Element Should Be Visible    ${loaderId}
         \    Exit For Loop If    ${present}==False
         \    log  Wait for loader to disappear ${i} sec     console=True
-        </pre>
-    </code>
-</p>
+```
 
-<p>This keyword can be modified a little bit to accept '15' or any other value - seconds to wait - as a parameter:</p>
 
-<p>
-    <code>
-        <pre>
+This keyword can be modified a little bit to accept '15' or any other value - seconds to wait - as a parameter:
+
+```
         *** Keyword ***
         Wait For Loader To Disappear
         [Arguments]    ${seconds}
@@ -42,6 +37,4 @@ header-img: '/img/p-01.jpg'
         \    ${present}=  Run Keyword And Return Status    Element Should Be Visible    ${loaderId}
         \    Exit For Loop If    ${present}==False
         \    log  Wait for loader to disappear ${i} sec     console=True
-        </pre>
-    </code>
-</p>
+```
