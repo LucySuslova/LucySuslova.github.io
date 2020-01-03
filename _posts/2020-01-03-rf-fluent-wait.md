@@ -16,7 +16,7 @@ header-img:  "img/posts/01.jpg"
 Often enough I need to know when the loader element has already disappeared and I can continue to perform further actions and verifications.
     In such cases I use a kind of ```Wait Until Element Is Not Visible``` workaround.
 
-{% highlight python linenos %}
+{% highlight python %}
         *** Keyword ***
         Wait For Loader To Disappear
         :FOR    ${i}    IN RANGE    15
@@ -29,7 +29,7 @@ Often enough I need to know when the loader element has already disappeared and 
 
 This keyword can be modified a little bit to accept '15' or any other value - seconds to wait - as a parameter:
 
-{% highlight python linenos %}
+{% highlight python %}
         *** Keyword ***
         Wait For Loader To Disappear
         [Arguments]    ${seconds}
