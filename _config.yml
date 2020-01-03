@@ -1,28 +1,25 @@
+# Site settings
 title: "test automation"
 header-img: img/bg-index.jpg
-email: "your-email@example.com"
-copyright_name: "lucy suslova"
+email: lucysuslova@gmail.com
+copyright_name: Lucy Suslova
 description: "short notes"
-name: "test automation notes"
+name: "test automation short notes"
 baseurl: ""
 url: "https://lucysuslova.github.io"
+twitter_username: luciesuva
+github_username:  lucysuslova
+email_username:  lucysuslova@gmail.com
 
-# Social Profiles
-twitter_username:  luciesuva
-github_username:   lucysuslova
-#facebook_username: StartBootstrap
+# Google Analytics
+# To enable google analytics, uncomment below line with a valid Google Tracking ID
+#google_tracking_id:
 
 # Build settings
-markdown:          kramdown
-highlighter:       rouge
-permalink:         pretty
-paginate:          5
-paginate_path:     "/posts/page:num/"
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-
-theme: jekyll-theme-cayman
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 gems: [jekyll-paginate, jekyll-feed, jekyll-seo-tag, jekyll-sitemap]
