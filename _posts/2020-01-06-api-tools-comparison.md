@@ -120,10 +120,6 @@ The Fluent Interface which is supposed to be the main highlight of REST Assured 
 [No][update-json]. Especially for data-driven tests, updating nested JSON is near impossible
 
 - No SOAP support
-- HTTPS/SSL without certificates
-
-Although there is “relaxed” HTTPS, a certificate is needed in [some cases][ssl-config]
-
 - Built-in support for switching environment config
 
 Config is somewhat [convoluted][ra-config] in REST Assured. You have to use something like a DI framework (or roll your own) to read properties files
@@ -168,7 +164,6 @@ use **Feign** if you like experiments :)
 [issue]: https://github.com/rest-assured/rest-assured/issues/497
 [extract-multiple-values]: https://github.com/rest-assured/rest-assured/wiki/usage#extracting-values-from-the-response-after-validation
 [update-json]: https://groups.google.com/forum/#!topic/rest-assured/uNGxBLB5uvI
-[ssl-config]: https://www.javadoc.io/doc/com.jayway.restassured/rest-assured/latest/com/jayway/restassured/config/SSLConfig.html
 [ra-config]: https://github.com/rest-assured/rest-assured/issues/239
 [ra-ws]: https://github.com/rest-assured/rest-assured/issues/850
 [wiremock]: http://wiremock.org/
