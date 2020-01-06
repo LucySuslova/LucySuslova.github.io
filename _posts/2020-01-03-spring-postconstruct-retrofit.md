@@ -2,7 +2,7 @@
 layout: post
 title:  "spring @PostConstruct annotation with retrofit2 "
 subtitle: "to build http api endpoints"
-date:   2020-01-03 23:45:13 -0400
+date:   2020-01-03 10:40:39 +0300
 
 ---
 
