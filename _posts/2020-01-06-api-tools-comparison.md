@@ -147,7 +147,7 @@ No, you have to use Java code or a library like [Awaitility][awaitility]
 
 ### Instead of conclusion
 
-Frameworks and tools for API test automation are not limited to these tree mentioned in the article. 
+Frameworks and tools for API test automation are not limited to these three mentioned in the article. 
 And you should choose carefully depending on the needs and requirements of your project. 
 
 In short, general recommendations may be as following:
