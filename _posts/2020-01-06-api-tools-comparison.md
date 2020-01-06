@@ -22,26 +22,24 @@ But sometimes you need to think about other solutions...
 Basically, in most cases I have a choice between REST Assured, Retrofit and Feign. And here's the comparison.
 
 
-##### Retrofit
+### Retrofit
 
 **Pros**
 
-1. Full access to the HTTP response
-
-2. Can retrieve POJO Instead of JSON
-
-3. Can make synchronous or asynchronous HTTP requests
-
-4. Uses annotations to describe the HTTP request
-
-5. Url manipulations allowed
+- Full access to the HTTP response
+- Can retrieve POJO Instead of JSON
+- Can make synchronous or asynchronous HTTP requests
+- Uses annotations to describe the HTTP request
+- Url manipulations allowed
 
 {% highlight java %}
 @GET("group/{id}/users")
 Call<List<User>> groupList(@Path("id") int groupId);
 {% endhighlight %}
 
-6. Methods can be declared to send form-encoded and multipart data
+
+- Methods can be declared to send form-encoded and multipart data
+
 
 {% highlight java %}
 @Multipart
@@ -49,72 +47,59 @@ Call<List<User>> groupList(@Path("id") int groupId);
 Call<User> updateUser(@Part("photo") RequestBody photo, @Part("description") RequestBody description);
 {% endhighlight %}
 
-7. Interceptors can be used to retrieve tokens etc. and add them to all (or by condition) requests
 
-8. Converters can be added to support different data types
-
-9. Pure type-safe HTTP client, not a framework. Can be extended with any runners/reports/config libs/assertion libs etc.
-
-10. Easy mocking
+- Interceptors can be used to retrieve tokens etc. and add them to all (or by condition) requests
+- Converters can be added to support different data types
+- Pure type-safe HTTP client, not a framework. Can be extended with any runners/reports/config libs/assertion libs etc.
+- Easy mocking
 
 **Cons**
 
-1. Logging (need to create interceptor)
-
-2. Needs wrappers
-
-3. More coding
+- Logging (need to create interceptor)
+- Needs wrappers
+- More coding
 
 
-##### Feign
+### Feign
 
 **Pros**
 
-1. Allows you to write your own code on top of http libraries
-
-2. Connects the code to http APIs with minimal overhead and code via customizable decoders and error handling
-
-3. Inspired by Retrofit, gives flexibility
-
-4. Out of box logging
-
-5. Customization
-
-6. Built-in retry mechanism (Feign, by default, will automatically retry IOExceptions, regardless of HTTP method)
+- Allows you to write your own code on top of http libraries
+- Connects the code to http APIs with minimal overhead and code via customizable decoders and error handling
+- Inspired by Retrofit, gives flexibility
+- Out of box logging
+- Customization
+- Built-in retry mechanism (Feign, by default, will automatically retry IOExceptions, regardless of HTTP method)
 
 **Cons**
 
-1. Feign clients can be used to consume text-based HTTP APIs only, which means that they cannot handle binary data, 
+- Feign clients can be used to consume text-based HTTP APIs only, which means that they cannot handle binary data, 
 e.g. file uploads or downloads.
 
 
-##### REST Assured*
+### REST Assured*
 
 **Pros**
 
-1. Easy setup
-
-2. Almost all needed features out of box
-
-3. Can be extended with assertion libs ([Harmcrest][hamcrest])
+- Easy setup
+- Almost all needed features out of box
+- Can be extended with assertion libs ([Harmcrest][hamcrest])
 
 **Cons**
 
-1. HTTP Client
+- HTTP Client
 
 Apache 4.X, but the code depends on deprecated APIs. There are some concerns with this design. More details in this [issue][issue]
 
-2. Validate All Payload values in one step
+- Validate All Payload values in one step
 
 * Not built-in. You need to use external libraries such as [Harmcrest][hamcrest]
 * No easy way to do a “deep equals” comparison for nested objects
 * No way to “ignore” fields - for e.g. id / date / time values which are dynamic
 
-3. No built-in data-type, conditional-logic and RegEx validations
-
-4. Impossible to validate schema of all elements in a JSON array in one step
-
-5. No native support for expressing JSON or XML in test-scripts
+- No built-in data-type, conditional-logic and RegEx validations
+- Impossible to validate schema of all elements in a JSON array in one step
+- No native support for expressing JSON or XML in test-scripts
 
 {% highlight json %}
 "{ \"name\": \"Billie\" }"
@@ -125,56 +110,50 @@ Apache 4.X, but the code depends on deprecated APIs. There are some concerns wit
 "<cat name=\"Billie\"></cat>"
 {% endhighlight %}
 
-6. Extracting multiple data-elements for reuse in subsequent HTTP calls
+- Extracting multiple data-elements for reuse in subsequent HTTP calls
 
 Convoluted.
 The Fluent Interface which is supposed to be the main highlight of REST Assured actually [gets in the way here][extract-multiple-values]
 
-7. Can update a given JSON or XML using a path expression
+- Can update a given JSON or XML using a path expression
 
 [No][update-json]. Especially for data-driven tests, updating nested JSON is near impossible
 
-8. No SOAP support
-
-9. HTTPS/SSL without certificates
+- No SOAP support
+- HTTPS/SSL without certificates
 
 Although there is “relaxed” HTTPS, a certificate is needed in [some cases][ssl-config]
 
-10. Built-in support for switching environment config
+- Built-in support for switching environment config
 
 Config is somewhat [convoluted][ra-config] in REST Assured. You have to use something like a DI framework (or roll your own) to read properties files
 
-11. Parallel test Execution
+- Parallel test Execution
 
 The creator has confirmed that “REST Assured is not 100% safe to use in multi-threaded scenarios”
 
-12. Report does not include HTTP request and response logs in-line
-
-13. Test Doubles or Mocks built-in
+- Report does not include HTTP request and response logs in-line
+- Test Doubles or Mocks built-in
 
 No. You have to use 3rd party frameworks such as [Wiremock][wiremock] etc
 
-14. [No][ra-ws] websocket support
-
-15. Async Support
+- [No][ra-ws] websocket support
+- Async Support
 
 No, you have to use Java code or a library like [Awaitility][awaitility]
-_______
 
-*some RA points found in web and aggregated here
+
+###### *some RA points found in web and aggregated here
 
 
 #### Instead of conclusion
 
 Frameworks and tools for API test automation are not limited to these tree mentioned in the article. 
 And you should choose carefully depending on the needs and requirements of your project. 
-
 In short, general recommendations may be as following:
 
 use **REST Assured** if you need to build reliable and maintainable test automation
-
 use **Retrofit** if you need more flexibility and control
-
 use **Feign** if you like experiments :)
 
 
