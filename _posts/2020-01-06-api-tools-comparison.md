@@ -142,18 +142,20 @@ No. You have to use 3rd party frameworks such as [Wiremock][wiremock] etc
 
 No, you have to use Java code or a library like [Awaitility][awaitility]
 
-
 ###### *some RA points found in web and aggregated here
 
 
-#### Instead of conclusion
+### Instead of conclusion
 
 Frameworks and tools for API test automation are not limited to these tree mentioned in the article. 
 And you should choose carefully depending on the needs and requirements of your project. 
+
 In short, general recommendations may be as following:
 
 use **REST Assured** if you need to build reliable and maintainable test automation
+
 use **Retrofit** if you need more flexibility and control
+
 use **Feign** if you like experiments :)
 
 
