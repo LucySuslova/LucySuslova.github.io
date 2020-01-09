@@ -23,17 +23,14 @@ And what happened? Unfortunately, I was not able to do so.
 I had a helper method ```at()``` that creates a page object instance and makes the test script more readable:
 
 {% highlight java %}
-
 public static <T> T at(Class<T> pageClass) {
         return Selenide.page(pageClass);
     }
-    
 {% endhighlight %}
 
 When you develop a test script it looks like following:
 
 {% highlight java %}
-
 @Test
 public void userCanRegisterTest(User user){
 
@@ -44,7 +41,6 @@ public void userCanRegisterTest(User user){
         //rest of the test  
          
 }
-
 {% endhighlight %}
 
 So you know exactly "where you are" - what page object you are currently working with. I find it pretty convenient.
@@ -52,7 +48,6 @@ So you know exactly "where you are" - what page object you are currently working
 And here's the code that did not work for me:
 
 {% highlight java %}
-
 @Component
 public class HomePage {
 
@@ -65,8 +60,7 @@ public class HomePage {
     ...
     
 }
-
-{% highlight java %}
+{% endhighlight %}
 
 Note that I didn't create ```Header``` or ```Footer``` with ```new``` anywhere in the code 
 and ```Header``` and ```Footer``` classes were annotated with ```@Component```.
