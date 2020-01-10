@@ -66,7 +66,7 @@ Note that I didn't create ```Header``` or ```Footer``` with ```new``` anywhere i
 and ```Header``` and ```Footer``` classes were annotated with ```@Component```.
 
 So these autowired fields are never resolved and are ```null```. This is actually quite obvious but if you are new to Spring/Selenide it might be a little bit disappointing.
-The problem is how Selenide instantiates page objects. It uses ```newInstance()``` to create page object. And Spring does not work this way.
+The problem is how Selenide instantiates page objects. It uses ```newInstance()``` to create a page object. And Spring does not work this way.
 
 #### Solution
 
