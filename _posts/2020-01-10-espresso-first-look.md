@@ -2,7 +2,7 @@
 layout: post
 title:  "how I met espresso and kotlin "
 subtitle: "into"
-date:   2020-01-010 09:40:39 +0300
+date:   2020-01-10 09:40:39 +0300
 
 ---
 
