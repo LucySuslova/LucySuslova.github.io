@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "how I met espresso and kotlin "
-subtitle: "into"
+subtitle: "intro"
 date:   2020-01-10 09:40:39 +0300
 
 ---
