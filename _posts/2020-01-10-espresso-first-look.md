@@ -27,6 +27,7 @@ So here's some input data I had when I started to think about the tech stack for
 * I have access to app's code 
 * I was limited to use [Azure Pipelines][pipelines] (hosted macOS) instead of Jenkins or cloud solutions
 
+
 #### Solution
 
 In this case I wanted to find a lightweight solution that can be easily deployed on hosted macOS. 
