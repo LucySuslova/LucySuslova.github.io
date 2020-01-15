@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "kotlin "
-subtitle: "developing test scripts. test robots"
+title:  "developing test scripts in kotlin "
+subtitle: "espresso test robots"
 date:   2020-01-15 09:40:39 +0300
 
 ---
