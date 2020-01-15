@@ -64,7 +64,7 @@ class UploadNotificationTest : BaseTest() {
     }
     
     @Test
-    fun openUploadNotificationShadeTest() {
+    fun uploadNotificationTest() {
     //open menu with Espresso
         onView(withContentDescription("Open navigation drawer")).perform(click())
     //go to specific option with Espresso   
