@@ -10,7 +10,7 @@ I was working with Java so it wasn't a problem to switch to Kotlin. Indeed, Kotl
 its features help a lot to reduce code lines, it provides null-safety mechanism, data classes and other cool features. 
 
 My plan is to highlight some language features and give a short example of usage. Of course, 
-it is not a complete overview of all existing features, just those of them that I used when developing test scripts with espresso for Android native app.
+it is not a complete overview of all existing features, just those of them that I used when developing test scripts with Espresso for Android native app.
 
 So let's start.
 
@@ -107,7 +107,7 @@ You can create as many robots as needed and use them in one test. The test will 
 {% highlight kotlin %}
 
     @Test
-    fun switchEnvironmentsTest() {
+    fun multipleRobotsTest() {
     
         switchEnvironmentRobot {
             //actions
