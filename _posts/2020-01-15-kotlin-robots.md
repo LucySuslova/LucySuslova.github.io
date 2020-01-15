@@ -14,13 +14,13 @@ it is not a complete overview of all existing features, just those of them that 
 
 So let's start.
 
-#### robot pattern + kotlin (objects, ```apply()```)
+#### robot pattern + kotlin ([objects][object], ```apply()```)
 
 You may heard about Page Object pattern that is widely used in test automation. For Espresso tests there is [```Robot```][robot] pattern - 
 each 'robot' contains functions that correspond to specific user actions on a specific (one) screen. Robots can be implemented in 
 couple of ways especially with the power of Kotlin.
 
-Robot:
+Robot class. We are using ```object``` keyword to create a 'robot' class, it means that this class will be a singleton:
 
 {% highlight kotlin %}
 //imports
@@ -130,3 +130,4 @@ Simple and clear.
 
 [robot]: https://academy.realm.io/posts/kau-jake-wharton-testing-robots/
 [scope_fn]: https://kotlinlang.org/docs/reference/scope-functions.html
+[object]: https://kotlinlang.org/docs/reference/object-declarations.html
