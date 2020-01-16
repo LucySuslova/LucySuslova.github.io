@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "espresso "
-subtitle: "+ uiautomator. part 1"
+subtitle: "+ uiautomator"
 date:   2020-01-14 09:40:39 +0300
 
 ---
