@@ -19,7 +19,7 @@ And if you are not an Android developer or have limited access to app's code, it
 
 In this post I want to talk about deep links and how they can help with in-app navigation for test automation.
 
-In Android, a deep link is a link that takes you directly to a specific destination within an app.[ref][deeplink]
+In Android, a deep link is a link that takes you directly to a specific destination within an app. ([ref][deeplink])
 
 Let's give it a try.
 
@@ -35,7 +35,7 @@ To launch the fragment we can have the following function where activity launche
 
 {% highlight kotlin %}
     fun launchFragment(activityRule: ActivityTestRule<MainActivity>, destinationId: Int, arg: Bundle? = null) {
-        val launchFragmentIntent = buildLaunchFragmentIntent(destinationId, arg)
+        val launchFragmentIntent = buildFragmentIntent(destinationId, arg)
         activityRule.launchActivity(launchFragmentIntent)
     }
 {% endhighlight %}
@@ -47,10 +47,10 @@ accepts optional ```arg: Bundle?``` because we need to pass a pet that should be
 In such case fields of edit screen will be populated with pet's data.
 
 
-Function ```buildLaunchFragmentIntent``` is the place where we're building a deep link to the required fragment (```destinationId: Int```) directly:
+Function ```buildFragmentIntent``` is the place where we're building a deep link to the required fragment (```destinationId: Int```) directly:
 
 {% highlight kotlin %}
-    fun buildLaunchFragmentIntent(destinationId: Int, arg: Bundle?): Intent =
+    fun buildFragmentIntent(destinationId: Int, arg: Bundle?): Intent =
         NavDeepLinkBuilder(context)
             .setGraph(R.navigation.navigation_graph)
             .setComponentName(MainActivity::class.java)
