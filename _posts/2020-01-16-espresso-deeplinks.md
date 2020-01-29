@@ -63,7 +63,7 @@ So just passing the fragment id to the ```launchFragment``` function will do the
 
 One question still remains open - ```arg: Bundle?```. How to create our pet (Bundle) to pass it to the link builder and display on edit pet screen?
 
-Our pet should have type, name, and age. These values are passes as parameters to ```createTestBundle``` function:
+Our pet should have type, name, and age. These values are passed as parameters to ```createTestBundle``` function:
 
 {% highlight kotlin %}
     fun createTestBundle(petType: String?, petName: String?, petAge: Int?): Bundle? {
