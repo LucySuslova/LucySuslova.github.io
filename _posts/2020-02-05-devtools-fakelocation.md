@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "selenium 4. chrome dev tools  "
-subtitle: "fake geolocation"
+title:  "fake geolocation "
+subtitle: "selenium 4. chrome dev tools"
 date:   2020-02-05 09:40:59 +0300
 
 ---
