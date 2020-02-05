@@ -71,7 +71,7 @@ Then we can implement test scripts that are using devtools in various flows.
 {% endhighlight %}
 
 Each sent request will contain this ```testCustomHeader: testCustomHeaderValue``` key-value pair in headers.
-_______
+
 
 Please find full code examples in the [github repo][repo].
 
