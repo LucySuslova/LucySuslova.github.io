@@ -66,7 +66,7 @@ That's all. Write your tests as always and they will be executed in docker conta
 Full code example can be found [here][repo].
 
 
-[repo]: https://github.com/LucySuslova/chrome-devtools-selenide
+[repo]: https://github.com/LucySuslova/selenide-testcontainers
 [testcontainers]: https://www.testcontainers.org/
 [selenide]: https://github.com/selenide/selenide
 [junit5]: https://junit.org/junit5/
