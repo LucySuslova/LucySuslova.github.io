@@ -51,7 +51,10 @@ Finally, we need to execute ```copyEnvProps``` task. As we know we need to do it
 tasks.withType(Test)*.finalizedBy 'copyEnvProps'
 {% endhighlight %}
 
-As a result we have an updated Allure report:
+This line means that ```copyEnvProps``` task will be executed automatically after each ```test``` task.
+
+As a result, after executing tests with common ```./gradlew clean testUI``` command and generating Allure report 
+we'll have an updated Environment section:
 
 ![Allure environment section]({{ site.baseurl }}/img/allure_env.png)
 
