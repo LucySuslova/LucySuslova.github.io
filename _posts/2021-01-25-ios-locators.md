@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "appium "
-subtitle: "ios specific locator strategies"
+title:  "ios specific locator strategies "
+subtitle: "appium"
 date:   2021-01-25 09:40:39 +0300
 
 ---
@@ -59,7 +59,8 @@ Appium has dedicated ```MobileBy``` that helps us to find mobile elements. It is
 
 String confirmBtnSelector = "**/XCUIElementTypeAlert/**/XCUIElementTypeButton[1]";
 driver.findElement(MobileBy.iOSClassChain(confirmBtnSelector));
-{% endhighlight %}
+{% endhighlight %}  
+
 
 #### ```-ios predicate string```
 
