@@ -92,7 +92,9 @@ matches the last link.
 
 ```MobileBy.iOSClassChain("**/XCUIElementTypeOther[`label == "picker"`]/**/XCUIElementTypeStaticText")```  
 matches all descendant StaticTexts of the first ElementTypeOther with the label equal to 'picker'.
-___
+
+#### Conclusion
+
 These locator strategies are not cross-platform. But in such way you can go a little deeper into understanding of a particular mobile platform. 
 
 Starting from [version][version] 1.18.0 you can also find iOS specific locators inside Appium Inspector.
