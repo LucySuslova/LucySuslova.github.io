@@ -31,6 +31,10 @@ Selenium WebDriver offers following [element selection strategies][element selec
 They are pretty well-known for all automation QAs, it's impossible to create any test script without locating proper elements. 
 Some of them are used frequently, others quite rarely. 
 
+
+![Appium inspector]({{ site.baseurl }}/img/banner.png)
+
+
 When someone starts mobile test automation I guess it's natural to use what you know better. And we keep using IDs and XPaths.
 But if you spend a minute to read Appium docs you'll find out that it offers something more.
 
