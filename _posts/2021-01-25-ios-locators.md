@@ -101,10 +101,7 @@ matches all descendant StaticTexts of the first ElementTypeOther with the label 
 
 These locator strategies are not cross-platform. But in such way you can go a little deeper into understanding of a particular mobile platform. 
 
-Starting from [version][version] 1.18.0 you can also find iOS specific locators inside Appium Inspector.
-
-![Appium inspector]({{ site.baseurl }}/img/appium.png)
-
+Starting from version [1.18.0][1.18.0] you can find iOS specific locators examples (along with XPath) inside Appium Inspector.
 
 
 
@@ -112,4 +109,4 @@ Starting from [version][version] 1.18.0 you can also find iOS specific locators 
 [element selection strategies]: https://www.selenium.dev/documentation/en/getting_started_with_webdriver/locating_elements/#element-selection-strategies
 [attributes]: https://github.com/facebookarchive/WebDriverAgent/wiki/Predicate-Queries-Construction-Rules#available-attributes
 [search]: https://github.com/facebookarchive/WebDriverAgent/wiki/Class-Chain-Queries-Construction-Rules
-[version]: https://github.com/appium/appium-desktop/releases/tag/v1.18.0
+[1.18.0]: https://github.com/appium/appium-desktop/releases/tag/v1.18.0
