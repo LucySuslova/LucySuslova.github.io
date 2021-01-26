@@ -81,6 +81,10 @@ and for Android:
     }
 {% endhighlight %}
 
+
+![Appium inspector]({{ site.baseurl }}/img/appium-deep-links.png)
+
+
 Then we can have a cross-platform method:
 
 {% highlight java %}
